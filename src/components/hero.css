@@ -1,0 +1,51 @@
+.hero .container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 6.4rem auto;
+  justify-content: center;
+  align-items: center;
+  padding: 1.6rem;
+}
+
+.hero .right {
+  padding: 1.6rem;
+}
+
+.hero h1 {
+  padding: 1.6rem 0;
+}
+
+.hero .left {
+  padding: 1.6rem;
+}
+
+.hero .img-container {
+  width: 100%;
+  display: flex;
+}
+
+.hero img {
+  max-width: 80%;
+  margin: auto;
+}
+
+.hero .input-container {
+  margin-top: 2rem;
+}
+
+.hero .input-container input {
+  margin-left: 1rem;
+}
+
+.input-container input:focus {
+  border: 1px solid #2c5fb8;
+}
+
+/* media queries */
+@media screen and (max-width: 940px) {
+  .hero .container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+}

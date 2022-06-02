@@ -1,0 +1,133 @@
+.header {
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  border: 1px solid #eee;
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  height: 100%;
+}
+
+.colors {
+  color: var(--primary);
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: right;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo h1 {
+  margin-left: 2.7rem;
+  font-size: 3.2rem;
+}
+.nav-logo img {
+  width: 8rem;
+  height: 4rem;
+  cursor: pointer;
+}
+
+.nav-menu li {
+  padding: 0 1rem;
+}
+
+.nav-menu a {
+  padding: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #333;
+  transition: 0.1s ease-in-out;
+}
+
+.nav-menu a:hover {
+  border-bottom: 2px solid var(--primary);
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.btn-group {
+  display: flex;
+  align-items: center;
+}
+.nav-btn {
+  background-color: #fff;
+  color: var(--primary);
+}
+
+.btn-group a {
+  font-size: 1.7rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 0 1rem;
+  padding: 1rem;
+  transition: 0.2s ease-in-out;
+  border-left: 1px dashed var(--primary);
+}
+
+.btn-group a:hover {
+  color: var(--primary);
+}
+
+.btn-group img {
+  width: 4rem;
+  height: 4rem;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.btn-group img:hover {
+  opacity: 0.5;
+}
+
+/* media queries */
+
+@media screen and (max-width: 1240px) {
+  .hamburger {
+    display: flex;
+  }
+  .nav-menu {
+    position: absolute;
+    flex-direction: column;
+    justify-content: start;
+    right: -100%;
+    top: 60px;
+    height: 100vh;
+    transition: 0.4s;
+    background: #fff;
+    border-left: 1px solid #eee;
+    z-index: 2;
+  }
+  .nav-logo h1 {
+    font-size: 2.5rem;
+  }
+
+  .nav-menu.active {
+    right: 0;
+  }
+  .nav-menu li {
+    padding: 1rem;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+  }
+  .nav-menu a {
+    font-size: 2rem;
+  }
+  .nav-menu a:hover {
+    border: none;
+  }
+}
